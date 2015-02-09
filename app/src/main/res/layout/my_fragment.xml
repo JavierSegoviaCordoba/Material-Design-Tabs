@@ -5,6 +5,8 @@
     android:orientation="vertical">
 
     <com.videum.javier.tabs.Utils.SlidingTabLayout
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         android:clipToPadding="false"
         android:id="@+id/tabs"
         android:layout_width="match_parent"

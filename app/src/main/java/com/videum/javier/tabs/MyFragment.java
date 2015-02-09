@@ -1,8 +1,10 @@
 package com.videum.javier.tabs;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +30,7 @@ public class MyFragment extends Fragment {
         tabs = (SlidingTabLayout) view.findViewById(R.id.tabs);
         tabs.setDistributeEvenly(false);
 
+
         // Tab indicator color
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
@@ -38,8 +41,11 @@ public class MyFragment extends Fragment {
                 return getResources().getColor(R.color.md_white_1000);
             }
         });
-
         tabs.setViewPager(pager);
+
+
+
+        Log.d("Parapa", "value = " + tabs.getChildAt(0).getLayoutParams().width);
 
         return view;
     }
